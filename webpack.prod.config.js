@@ -34,7 +34,7 @@ module.exports = {
 		loaders: [
 			{
 		        test: /\.js$/,
-		        loaders: ['react-hot', 'babel'],
+		        loader: 'babel',
 		        exclude: /node_modules/
 		    },
 		    {
