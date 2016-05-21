@@ -17,4 +17,4 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 app.listen(port)
-console.log('Listening at http://localhost:3000')
+console.log('Listening at http://localhost:',port)

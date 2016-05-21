@@ -7,6 +7,7 @@ const App = () => (
 		<div className={'row header'}>
 			<div className={'col-md-12 text-center'}>
 				<h1 className={'header-title'}>BEER ARENA</h1>
+				<p>(Work in progress...)</p>
 			</div>
 		</div>
 		<div className={'row'}>
