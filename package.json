@@ -2,14 +2,20 @@
   "name": "beer-arena",
   "version": "1.0.0",
   "description": "\"Compare beer styles\"",
+  "engines": {
+    "node": "5.0.0"
+  },
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "build": "webpack --config ./webpack.prod.config.js --progress --colors",
+    "start": "node app.js",
     "lint": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anh Tran",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.13.4",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-redux": "^4.4.5",
@@ -33,6 +39,11 @@
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aptran/beer-arena"
   }
 }

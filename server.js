@@ -1,15 +1,15 @@
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config');
+const path = require('path')
+const express = require('express')
 
-new WebpackDevServer(webpack(config), {
-  publicPath: config.output.publicPath,
-  hot: true,
-  historyApiFallback: true
-}).listen(3000, 'localhost', function (err, result) {
-  if (err) {
-    return console.log(err);
+module.exports = {
+  app: function () {
+    const app = express()
+    const indexPath = path.join(__dirname, './index.html')
+    const publicPath = express.static(path.join(__dirname, '/static'))
+
+    app.use('/static', publicPath)
+    app.get('/', function (_, res) { res.sendFile(indexPath) })
+
+    return app
   }
-
-  console.log('Listening at http://localhost:3000/');
-});
+}

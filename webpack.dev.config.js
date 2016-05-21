@@ -5,10 +5,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    './src/index',
-    './src/css/main.scss'
+    'webpack-hot-middleware/client',
+    './src/index'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -32,7 +30,7 @@ module.exports = {
           'style', 
           'css!sass' 
         ),
-        include: path.join(__dirname, 'src')
+        include: path.join(__dirname, 'src', 'css')
       },
       {
         test: /\.json/,
