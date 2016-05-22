@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "\"Compare beer styles\"",
   "engines": {
-    "node": "5.0.0"
+    "node": "5.0.0",
+    "npm": "3.9.0"
   },
   "main": "app.js",
   "scripts": {
